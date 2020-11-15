@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="30dp"
+    android:fillViewport="true"
+
     tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmail"
@@ -50,6 +55,7 @@
 
 
     <TextView
+        android:id="@+id/tvOr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="OR"
@@ -62,7 +68,7 @@
 
     <Button
         android:id="@+id/btLogin"
-        style="@style/Button"
+        style="@style/buttonDefault"
         android:text="log in"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,15 +80,18 @@
 
     <Button
         android:id="@+id/btRegister"
-        style="@style/Button"
+        style="@style/buttonDefault"
         android:layout_width="0dp"
-        android:layout_marginBottom="168dp"
+
         android:backgroundTint="@color/register_button"
         android:text="register"
+        app:layout_constraintVertical_bias="0.7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
+        app:layout_constraintTop_toBottomOf="@id/tvOr"
         app:layout_constraintStart_toStartOf="parent" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
