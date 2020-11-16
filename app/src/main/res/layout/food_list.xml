@@ -21,7 +21,7 @@
         />
 
     <TextView
-        android:layout_width="150dp"
+        android:layout_width="250dp"
         android:layout_height="61dp"
         app:layout_constraintEnd_toEndOf="@id/ivFoodImage"
         app:layout_constraintStart_toStartOf="@id/ivFoodImage"

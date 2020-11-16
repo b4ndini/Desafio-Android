@@ -15,8 +15,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:scaleType="fitXY"
-        
-        
+
+
         />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@id/ivRestaurant"
         android:background="@color/white"
         android:textColor="#1F2D3D"
-        android:text="Burger King Assis Brasil"
+        android:text="Burger King"
         android:paddingStart="16dp"
         android:paddingTop="8dp"
 
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvName"
         android:background="@color/white"
         android:textColor="#1F2D3D"
-        android:text="Avenida dos industriarios 666 Passo da areai"
+        android:text="Av. Lavandisca, 717 - Indianópolis"
         android:paddingStart="16dp"
         android:textSize="13sp"
         />
