@@ -14,6 +14,11 @@ class MainActivity : AppCompatActivity() {
 
 
         btLogin.setOnClickListener(){
+            val intent = Intent(this, RestaurantActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.btRegister).setOnClickListener(){
             val intent = Intent(this, RegisterActivity::class.java)
             intent.putExtra("teste", "Luis Felipe")
             intent.putExtra("teste1", "lfelipe.maior@gmail.com")

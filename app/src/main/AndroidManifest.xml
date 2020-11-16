@@ -11,16 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitalHouseFoods">
-        <activity android:name=".FoodDetailActivity"></activity>
-        <activity android:name=".FoodActivity" />
-        <activity android:name=".RestaurantActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashActivity"
+            android:theme="@style/AppTheme.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".FoodDetailActivity" android:theme="@style/AppTheme.Fullscreen" />
+        <activity android:name=".FoodActivity" android:theme="@style/AppTheme.Fullscreen" />
+        <activity android:name=".RestaurantActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 
