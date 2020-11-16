@@ -6,4 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".RestaurantActivity">
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRestaurantList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DDDDDD"
+        tools:itemCount="5"
+
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-226dp"
+        tools:listitem="@layout/food_list" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

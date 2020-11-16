@@ -28,7 +28,7 @@ class RegisterActivity : AppCompatActivity() {
         asd.setText(u1.name)
 
         findViewById<Button>(R.id.btRegister).setOnClickListener(){
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, RestaurantActivity::class.java)
 
             startActivity(intent)
         }

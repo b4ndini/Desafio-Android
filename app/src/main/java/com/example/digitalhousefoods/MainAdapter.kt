@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
 class MainAdapter(
-        val restaurantList: List<Restaurant>
+        val restaurantList: List<Restaurant>,
+        val onItemClicked: (Int) -> Unit
 ) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
 
@@ -22,7 +23,7 @@ class MainAdapter(
     }
 
     override fun onBindViewHolder(holder: MainAdapter.ViewHolder, position: Int) {
-        holder.bind(restaurantList[position])
+        holder.bind(restaurantList[position], onItemClicked)
     }
 
     override fun getItemCount(): Int {
@@ -30,7 +31,8 @@ class MainAdapter(
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-    fun bind(restaurant : Restaurant) = with(itemView) {
+
+        fun bind(restaurant : Restaurant, onItemClicked: (Int) -> Unit) = with(itemView) {
 
 
         val ivRestaurant = findViewById<ImageView>(R.id.ivRestaurant)
@@ -40,6 +42,9 @@ class MainAdapter(
         findViewById<AppCompatTextView>(R.id.tvAddress).text = restaurant.address
         findViewById<AppCompatTextView>(R.id.tvTime).text = restaurant.time
 
+        findViewById<ViewGroup>(R.id.vgRestaurantContainer).setOnClickListener{
+            onItemClicked(this@ViewHolder.adapterPosition)
+        }
 
     }
     }
